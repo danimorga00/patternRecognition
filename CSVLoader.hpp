@@ -7,6 +7,6 @@
 #include <vector>
 #include <string>
 
-std::vector<int> getColumn(const std::string& filename, int columnIdx, char delimiter = ',');
+std::vector<double> getColumn(const std::string& filename, int columnIdx, char delimiter = ',');
 
 #endif // CSVLOADER_H

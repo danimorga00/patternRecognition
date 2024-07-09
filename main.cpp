@@ -9,19 +9,20 @@ int main() {
     int columnIndex = 3; // Estrarre la terza colonna (indice 2), ad esempio
     int n = 3; // Dimensione del sottoarray da estrarre
 
-    std::vector<int> timeSeries = getColumn(filename, columnIndex);
+    std::vector<double> timeSeries = getColumn(filename, columnIndex);
+    std::vector<double> query = {4.0, 5.5, 6.0, 2, 3};
 
-    std::vector<int> query = extractRandomSubarray(timeSeries, n);
-
+    // Trova la migliore corrispondenza
     auto start = std::chrono::high_resolution_clock::now();
-
-    std::vector<int> results = searchTimeSeries(timeSeries, query);
-
+    int index = findBestMatch(timeSeries, query);
     auto end = std::chrono::high_resolution_clock::now();
-
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
-    std::cout << "Posizione sottoarray:  " << results[0] << " di " << timeSeries.size() << "\n ";
+    if (index != -1) {
+        std::cout << "La serie corta corrisponde meglio alla serie lunga all'indice " << index << " con SAD" << std::endl;
+    } else {
+        std::cout << "Nessuna corrispondenza trovata." << std::endl;
+    }
     std::cout << "Tempo di esecuzione: " << duration.count() << " microsecondi" << std::endl;
 
 }

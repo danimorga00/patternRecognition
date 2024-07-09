@@ -5,8 +5,8 @@
 #include <string>
 
 // Funzione per estrarre una colonna specifica da un file CSV e convertire i valori in interi
-std::vector<int> getColumn(const std::string& filename, int columnIdx, char delimiter) {
-    std::vector<int> column;
+std::vector<double> getColumn(const std::string& filename, int columnIdx, char delimiter) {
+    std::vector<double> column;
 
     // Apri il file
     std::ifstream file(filename);
