@@ -1,0 +1,21 @@
+# ninja log v6
+19	292	7422360779711398	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+1	231	7422365663336431	build.ninja	4ad5fda4c61994c8
+251	328	7422364200025091	patternRecognition.exe	641a99cb7dbb755d
+4	250	7422364197555007	CMakeFiles/patternRecognition.dir/main.cpp.obj	3ed31093fb8159e9
+15	289	7422360779671415	CMakeFiles/patternRecognition.dir/CSVLoader.cpp.obj	e0ec5485138c3067
+3	248	7422369679501053	CMakeFiles/patternRecognition.dir/main.cpp.obj	3ed31093fb8159e9
+248	337	7422369681944271	patternRecognition.exe	641a99cb7dbb755d
+25	397	7422379804253211	CMakeFiles/patternRecognition.dir/main.cpp.obj	3ed31093fb8159e9
+51	403	7422379804513223	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+403	617	7422379808037982	patternRecognition.exe	641a99cb7dbb755d
+4	245	7422380648107324	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+245	322	7422380650515880	patternRecognition.exe	641a99cb7dbb755d
+23	303	7422383948143910	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+304	380	7422383950948945	patternRecognition.exe	641a99cb7dbb755d
+14	266	7422383992154422	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+267	345	7422383994688479	patternRecognition.exe	641a99cb7dbb755d
+14	264	7422384873804871	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+265	341	7422384876312045	patternRecognition.exe	641a99cb7dbb755d
+13	262	7422385065139670	CMakeFiles/patternRecognition.dir/searchTimeSeries.cpp.obj	e2342166782fe7bd
+262	340	7422385067641830	patternRecognition.exe	641a99cb7dbb755d
