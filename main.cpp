@@ -5,8 +5,8 @@
 
 int main() {
 
-    std::string filename = "C:/Users/danie/CLionProjects/patternRecognition/BTC-2019min.csv";
-    int columnIndex = 3, querySize = 1000, min = 1, max = 10;
+    std::string filename = "../BTC-2019min.csv";
+    int columnIndex = 3, querySize = 1000, min = 1, max = 10000;
 
     std::vector<double> timeSeries = getColumn(filename, columnIndex);
     std::vector<double> query = generateRandomDoubleArray(querySize, min, max);
