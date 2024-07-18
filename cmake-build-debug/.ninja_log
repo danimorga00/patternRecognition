@@ -24,3 +24,6 @@
 268	364	7430000067800439	patternRecognition.exe	8cc5a74370fb0b62
 23	277	7430000327812313	CMakeFiles/patternRecognition.dir/main.cpp.obj	3ed31093fb8159e9
 277	364	7430000330354824	patternRecognition.exe	8cc5a74370fb0b62
+3	270	7430002066903800	CMakeFiles/patternRecognition.dir/main.cpp.obj	3ed31093fb8159e9
+8	309	7430002066954711	CMakeFiles/patternRecognition.dir/findBestMatch.cpp.obj	73470dfabb8354e5
+309	394	7430002069963782	patternRecognition.exe	8cc5a74370fb0b62
