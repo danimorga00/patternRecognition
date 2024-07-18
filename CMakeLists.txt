@@ -7,5 +7,5 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(patternRecognition main.cpp
         CSVLoader.hpp
         CSVLoader.cpp
-        searchTimeSeries.hpp
-        searchTimeSeries.cpp)
+        findBestMatch.hpp
+        findBestMatch.cpp)
