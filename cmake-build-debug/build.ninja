@@ -67,6 +67,12 @@ build CMakeFiles/patternRecognition.dir/findBestMatch.cpp.obj: CXX_COMPILER__pat
   OBJECT_DIR = CMakeFiles\patternRecognition.dir
   OBJECT_FILE_DIR = CMakeFiles\patternRecognition.dir
 
+build CMakeFiles/patternRecognition.dir/first_experiment.cpp.obj: CXX_COMPILER__patternRecognition_unscanned_Debug C$:/Users/danie/CLionProjects/patternRecognition/first_experiment.cpp || cmake_object_order_depends_target_patternRecognition
+  DEP_FILE = CMakeFiles\patternRecognition.dir\first_experiment.cpp.obj.d
+  FLAGS = -std=c++11 -fopenmp -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\patternRecognition.dir
+  OBJECT_FILE_DIR = CMakeFiles\patternRecognition.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target patternRecognition
@@ -75,7 +81,7 @@ build CMakeFiles/patternRecognition.dir/findBestMatch.cpp.obj: CXX_COMPILER__pat
 #############################################
 # Link the executable patternRecognition.exe
 
-build patternRecognition.exe: CXX_EXECUTABLE_LINKER__patternRecognition_Debug CMakeFiles/patternRecognition.dir/main.cpp.obj CMakeFiles/patternRecognition.dir/CSVLoader.cpp.obj CMakeFiles/patternRecognition.dir/findBestMatch.cpp.obj
+build patternRecognition.exe: CXX_EXECUTABLE_LINKER__patternRecognition_Debug CMakeFiles/patternRecognition.dir/main.cpp.obj CMakeFiles/patternRecognition.dir/CSVLoader.cpp.obj CMakeFiles/patternRecognition.dir/findBestMatch.cpp.obj CMakeFiles/patternRecognition.dir/first_experiment.cpp.obj
   FLAGS = -std=c++11 -fopenmp -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\patternRecognition.dir

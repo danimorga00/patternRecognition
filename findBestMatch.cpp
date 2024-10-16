@@ -6,6 +6,7 @@
 #include <omp.h>
 #include <random>
 #include <ctime>
+#include <fstream>
 
 double calculateSAD(const std::vector<double>& series1, const std::vector<double>& series2, int startIdx) {
     double sad = 0.0;
@@ -66,4 +67,28 @@ int findBestMatch_parallelized(const std::vector<double>& longSeries, const std:
         }
     }
     return bestMatchIdx;
+}
+// Funzione per scrivere il vettore di struct in un file CSV
+void writeToCSV(const std::vector<ExperimentResult>& results, const std::string& filename) {
+    // Apri il file in modalità scrittura
+    std::ofstream file(filename);
+
+    // Controlla se il file è aperto correttamente
+    if (!file.is_open()) {
+        std::cerr << "Errore nell'aprire il file!" << std::endl;
+        return;
+    }
+
+    // Scrivi l'intestazione del CSV (opzionale)
+    file << "T_seq,T_par,querySize\n";
+
+    // Itera attraverso la lista di risultati e scrivi ogni struct nel CSV
+    for (const auto& result : results) {
+        file << result.T_seq << "," << result.T_par << "," << result.querySize << "\n";
+    }
+
+    // Chiudi il file
+    file.close();
+
+    std::cout << "File CSV scritto correttamente." << std::endl;
 }
