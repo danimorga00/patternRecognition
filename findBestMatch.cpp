@@ -52,6 +52,8 @@ int findBestMatch_parallelized(const std::vector<double>& longSeries, const std:
     double minSAD = std::numeric_limits<double>::max();
     int bestMatchIdx = -1;
 
+    //omp_set_num_threads(4);
+
     #pragma omp parallel for
     for (int i = 0; i <= longSize - shortSize; ++i) {
         double sad = calculateSAD(longSeries, shortSeries, i);

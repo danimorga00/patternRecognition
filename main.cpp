@@ -16,6 +16,7 @@ int main() {
     auto end = std::chrono::high_resolution_clock::now();
     auto duration_seq = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
+    std::cout << "------------------------------------- Versione sequenziale --------------------------------------- " << std::endl;
     if (index != -1) {
         std::cout << "La serie corta corrisponde meglio alla serie lunga all'indice " << index << " con SAD" << std::endl;
     } else {
@@ -28,6 +29,7 @@ int main() {
     end = std::chrono::high_resolution_clock::now();
     auto duration_par = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
+    std::cout << std::endl << "--------------------------------------Versione parallela ----------------------------------------- " << std::endl;
     if (index != -1) {
         std::cout << "La serie corta corrisponde meglio alla serie lunga all'indice " << index << " con SAD" << std::endl;
     } else {
