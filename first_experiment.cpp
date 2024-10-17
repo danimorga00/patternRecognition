@@ -55,6 +55,7 @@ ExperimentResult firstExperiment(int querySize) {
     result.querySize = querySize;
     result.T_par = ((float)duration_par.count())/1000000;
     result.T_seq = ((float)duration_seq.count())/1000000;
+    result.speedUp = result.T_seq/result.T_par;
 
     return result;
 }

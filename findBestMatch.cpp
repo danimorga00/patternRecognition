@@ -71,8 +71,8 @@ int findBestMatch_parallelized(const std::vector<double>& longSeries, const std:
 // Funzione per scrivere il vettore di struct in un file CSV
 void writeToCSV(const std::vector<ExperimentResult>& results, const std::string& filename) {
     // Apri il file in modalità scrittura
-    std::ofstream file(filename);
-
+    std::ofstream file;
+    file.open (filename);
     // Controlla se il file è aperto correttamente
     if (!file.is_open()) {
         std::cerr << "Errore nell'aprire il file!" << std::endl;
@@ -84,7 +84,7 @@ void writeToCSV(const std::vector<ExperimentResult>& results, const std::string&
 
     // Itera attraverso la lista di risultati e scrivi ogni struct nel CSV
     for (const auto& result : results) {
-        file << result.T_seq << "," << result.T_par << "," << result.querySize << "\n";
+        file << result.querySize << "," << result.T_seq << "," << result.T_par << "," << result.speedUp << "\n";
     }
 
     // Chiudi il file

@@ -9,6 +9,7 @@
 typedef struct {
     float T_seq;
     float T_par;
+    float speedUp;
     float querySize;
 }ExperimentResult;
 
