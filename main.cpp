@@ -7,6 +7,6 @@
 
 int main() {
 
-    std::vector<ExperimentResult> results = firstExperiment(10, 100);
-    writeToCSV(results, "exp1.csv");     //FIXME non crea il file
+    std::vector<ExperimentResult> results = secondExperiment(20);
+    writeToCSV(results, "exp2.csv");     //FIXME non crea il file
 }

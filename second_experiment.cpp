@@ -25,7 +25,7 @@ std::vector<ExperimentResult> secondExperiment(int maxThreads) {
     std::vector<double> timeSeries = getColumn(filename, columnIndex);
     std::vector<double> query = generateRandomDoubleArray(100, min, max);
 
-    for(int i=0; i<maxThreads; i++) {
+    for(int i=1; i<=maxThreads; i++) {
         auto start = std::chrono::high_resolution_clock::now();
         int index = findBestMatch_parallelized(timeSeries, query, i);
         auto end = std::chrono::high_resolution_clock::now();
