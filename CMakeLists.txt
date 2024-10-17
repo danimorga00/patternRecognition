@@ -9,4 +9,5 @@ add_executable(patternRecognition main.cpp
         CSVLoader.cpp
         findBestMatch.hpp
         findBestMatch.cpp
-        first_experiment.cpp)
+        first_experiment.cpp
+        second_experiment.cpp)

@@ -47,13 +47,13 @@ int findBestMatch_sequential(const std::vector<double>& longSeries, const std::v
     return bestMatchIdx;
 }
 
-int findBestMatch_parallelized(const std::vector<double>& longSeries, const std::vector<double>& shortSeries) {
+int findBestMatch_parallelized(const std::vector<double>& longSeries, const std::vector<double>& shortSeries, int numThreads) {
     int longSize = longSeries.size();
     int shortSize = shortSeries.size();
     double minSAD = std::numeric_limits<double>::max();
     int bestMatchIdx = -1;
 
-    //omp_set_num_threads(4);
+    omp_set_num_threads(numThreads);
 
     #pragma omp parallel for
     for (int i = 0; i <= longSize - shortSize; ++i) {
@@ -84,7 +84,7 @@ void writeToCSV(const std::vector<ExperimentResult>& results, const std::string&
 
     // Itera attraverso la lista di risultati e scrivi ogni struct nel CSV
     for (const auto& result : results) {
-        file << result.querySize << "," << result.T_seq << "," << result.T_par << "," << result.speedUp << "\n";
+        file << result.querySize << "," << result.T_seq << "," << result.T_par << "," << result.speedUp << "," << result.numThreads <<"\n";
     }
 
     // Chiudi il file
