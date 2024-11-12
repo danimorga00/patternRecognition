@@ -30,7 +30,7 @@ std::vector<ExperimentResult> firstExperiment(int iterations, int expConstant) {
         std::vector<double> query = generateRandomDoubleArray(querySize, min, max);
 
         auto start = std::chrono::high_resolution_clock::now();
-        int index = findBestMatch_sequential(timeSeries, query);
+        int index = findBestMatch(timeSeries, query, 1);
         auto end = std::chrono::high_resolution_clock::now();
         auto duration_seq = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
@@ -43,7 +43,7 @@ std::vector<ExperimentResult> firstExperiment(int iterations, int expConstant) {
         std::cout << "Tempo di esecuzione: " << ((float)duration_seq.count())/1000000<< " microsecondi" << std::endl;
 
         start = std::chrono::high_resolution_clock::now();
-        index = findBestMatch_parallelized(timeSeries, query, 20);
+        index = findBestMatch(timeSeries, query, 20);
         end = std::chrono::high_resolution_clock::now();
         auto duration_par = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 

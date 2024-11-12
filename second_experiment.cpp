@@ -14,7 +14,7 @@
 #include "CSVLoader.hpp"
 #include "findBestMatch.hpp"
 
-std::vector<ExperimentResult> secondExperiment(int maxThreads) {
+std::vector<ExperimentResult> secondExperiment(int maxThreads, int querySize) {
 
     std::vector<ExperimentResult> results;
 
@@ -23,11 +23,11 @@ std::vector<ExperimentResult> secondExperiment(int maxThreads) {
     int columnIndex = 3, min = 1, max = 10000;
 
     std::vector<double> timeSeries = getColumn(filename, columnIndex);
-    std::vector<double> query = generateRandomDoubleArray(100, min, max);
+    std::vector<double> query = generateRandomDoubleArray(querySize, min, max);
 
     for(int i=1; i<=maxThreads; i++) {
         auto start = std::chrono::high_resolution_clock::now();
-        int index = findBestMatch_parallelized(timeSeries, query, i);
+        int index = findBestMatch(timeSeries, query, i);
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 

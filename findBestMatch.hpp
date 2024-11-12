@@ -14,12 +14,12 @@ typedef struct {
     int numThreads;
 }ExperimentResult;
 
-int findBestMatch_sequential(const std::vector<double>& longSeries, const std::vector<double>& shortSeries);
-int findBestMatch_parallelized(const std::vector<double>& longSeries, const std::vector<double>& shortSeries, int numThreads) ;
+int findBestMatch(const std::vector<double>& longSeries, const std::vector<double>& shortSeries);
+int findBestMatch(const std::vector<double>& longSeries, const std::vector<double>& shortSeries, int numThreads) ;
 double calculateSAD(const std::vector<double>& series1, const std::vector<double>& series2, int startIdx);
 std::vector<double> generateRandomDoubleArray(int size, double min, double max) ;
 std::vector<ExperimentResult> firstExperiment(int iterations, int expConstant) ;
-std::vector<ExperimentResult> secondExperiment(int maxThreads);
+std::vector<ExperimentResult> secondExperiment(int maxThreads, int querySize);
 void writeToCSV(const std::vector<ExperimentResult>& results, const std::string& filename);
 
 
